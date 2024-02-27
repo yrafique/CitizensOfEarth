@@ -1,0 +1,26 @@
+.issue-card {
+    cursor: pointer; /* Indicates that the card is clickable */
+    transition: transform .2s; /* Animation for click */
+}
+.issue-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+.issue-img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px;
+}
+.vote-counter {
+    font-size: 16px; /* Adjusted font size for readability */
+}
+.total-votes {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #495057;
+}
+.container {
+    padding-top: 20px;
+}
+body {
+    background-color: #e9ecef;
+}
