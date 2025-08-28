@@ -66,14 +66,14 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-50 flex min-h-screen">
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black/30 backdrop-blur-sm z-50 flex min-h-screen">
           <div className="flex-1 flex items-center justify-center p-4">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="bg-gray-900 rounded-3xl p-8 w-full max-w-md relative border border-gray-700"
+              className="modern-card modern-card-dark p-8 w-full max-w-md relative"
             >
             <button
               onClick={onClose}
@@ -83,11 +83,11 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
             </button>
 
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-2">
-                {isLogin ? 'Welcome Back!' : 'Join the Movement'}
+              <h2 className="text-title text-gray-900 dark:text-white mb-2">
+                {isLogin ? 'Welcome Back' : 'Join Citizens of Earth'}
               </h2>
-              <p className="text-gray-400">
-                {isLogin ? 'Sign in to continue voting' : 'Create your account to start voting'}
+              <p className="text-body text-gray-600 dark:text-gray-400">
+                {isLogin ? 'Sign in to continue making a difference' : 'Create your account to start voting on global issues'}
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
                     value={formData.name}
                     onChange={handleInputChange}
                     required={!isLogin}
-                    className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                    className="w-full pl-12 pr-4 py-4 modern-input modern-input-dark placeholder-gray-500"
                   />
                 </div>
               )}
@@ -116,7 +116,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                  className="w-full pl-12 pr-4 py-4 modern-input modern-input-dark placeholder-gray-500"
                 />
               </div>
 
@@ -129,7 +129,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
                   value={formData.password}
                   onChange={handleInputChange}
                   required
-                  className="w-full pl-10 pr-12 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                  className="w-full pl-12 pr-12 py-4 modern-input modern-input-dark placeholder-gray-500"
                 />
                 <button
                   type="button"
@@ -144,7 +144,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-red-500/10 border border-red-500/20 text-red-400 px-4 py-3 rounded-xl text-sm"
+                  className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 px-4 py-3 rounded-xl text-caption"
                 >
                   {error}
                 </motion.div>
@@ -153,14 +153,14 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+                className="w-full py-4 btn-primary disabled:opacity-50"
               >
                 {loading ? 'Please wait...' : (isLogin ? 'Sign In' : 'Create Account')}
               </button>
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-gray-400">
+              <p className="text-body text-gray-600 dark:text-gray-400">
                 {isLogin ? "Don't have an account? " : "Already have an account? "}
                 <button
                   onClick={() => {
@@ -168,7 +168,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
                     setError('')
                     setFormData({ name: '', email: '', password: '' })
                   }}
-                  className="text-cyan-400 hover:text-cyan-300 font-semibold transition-colors"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold smooth-transition"
                 >
                   {isLogin ? 'Sign up' : 'Sign in'}
                 </button>
@@ -176,9 +176,9 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }: AuthModalProps) {
             </div>
 
             {/* Demo credentials */}
-            <div className="mt-6 p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
-              <p className="text-xs text-gray-400 text-center mb-2">Demo Credentials:</p>
-              <p className="text-xs text-gray-300 text-center">
+            <div className="mt-6 p-4 bg-gray-100 dark:bg-gray-800 rounded-xl">
+              <p className="text-caption text-center mb-2 font-semibold">Demo Credentials</p>
+              <p className="text-caption text-center text-gray-600 dark:text-gray-400">
                 Email: demo@example.com<br />
                 Password: password123
               </p>

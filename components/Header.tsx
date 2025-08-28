@@ -30,7 +30,7 @@ export function Header() {
   }
 
   return (
-    <header className="glass-dark backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <header className="modern-nav modern-nav-dark sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-4">
@@ -40,24 +40,24 @@ export function Header() {
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               className="hidden sm:block"
             >
-              <Globe className="w-8 h-8 text-cyan-400" />
+              <Globe className="w-8 h-8 text-blue-600 dark:text-blue-400" />
             </motion.div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              CitizensOfEarth
+            <h1 className="text-headline text-gray-900 dark:text-white">
+              Citizens of Earth
             </h1>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#issues" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <a href="#issues" className="text-body text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 smooth-transition font-medium">
               Issues
             </a>
-            <a href="#impact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <a href="#impact" className="text-body text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 smooth-transition font-medium">
               Impact
             </a>
-            <a href="#leaderboard" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <a href="#leaderboard" className="text-body text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 smooth-transition font-medium">
               Leaderboard
             </a>
-            <a href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <a href="#about" className="text-body text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 smooth-transition font-medium">
               About
             </a>
           </nav>
@@ -91,7 +91,7 @@ export function Header() {
             ) : (
               <button 
                 onClick={() => setAuthModalOpen(true)}
-                className="hidden md:block px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-bold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
+                className="hidden md:block btn-primary"
               >
                 Sign In
               </button>
@@ -142,7 +142,7 @@ export function Header() {
             ) : (
               <button 
                 onClick={() => setAuthModalOpen(true)}
-                className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold"
+                className="mt-4 w-full btn-primary"
               >
                 Sign In
               </button>
@@ -152,7 +152,7 @@ export function Header() {
       </div>
 
       {/* Global Stats Bar */}
-      <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-800 py-2">
+      <div className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 py-3">
         <div className="container mx-auto px-4 flex items-center justify-center space-x-6 text-sm">
           <div className="flex items-center space-x-2">
             <Globe className="w-4 h-4 text-blue-600 dark:text-blue-400" />

@@ -27,62 +27,50 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white overflow-hidden">
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl float" />
-          <div className="absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl float" style={{animationDelay: '2s'}} />
-          <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl float" style={{animationDelay: '4s'}} />
-        </div>
-        
+      <section className="relative py-24 md:py-32 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">        
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-5xl mx-auto"
+            className="text-center max-w-4xl mx-auto"
           >
             <motion.h1 
-              className="text-6xl md:text-8xl font-black mb-8 leading-tight"
+              className="text-large md:text-6xl lg:text-7xl mb-6 text-gray-900 dark:text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Shape the Future
-              </span>
+              Empower Global
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
-                of Our Planet
-              </span>
+              <span className="text-blue-600 dark:text-blue-400">Change</span>
             </motion.h1>
             
             <motion.p 
-              className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto"
+              className="text-body md:text-xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-2xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Join <span className="text-cyan-400 font-bold">millions</span> of global citizens voting on critical issues, 
-              driving real change, and earning rewards for making a difference.
+              Join millions of global citizens making a difference. Vote on critical issues, 
+              drive meaningful change, and help shape a better future for all.
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <button className="group relative px-12 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl font-bold text-lg hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105">
-                <span className="relative z-10">Start Voting</span>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
+              <button className="px-8 py-4 btn-primary text-lg">
+                Get Started
               </button>
               
-              <button className="px-12 py-4 glass rounded-2xl font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20">
+              <button className="px-8 py-4 btn-secondary text-lg">
                 Learn More
               </button>
             </motion.div>
@@ -91,7 +79,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20">
+      <section className="relative py-20 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-4 gap-8"
@@ -100,8 +88,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <motion.div 
-              className="bg-gray-900/80 backdrop-blur-lg rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300 border border-gray-700/50"
-              whileHover={{ y: -10 }}
+              className="modern-card modern-card-dark p-8 text-center group smooth-transition"
+              whileHover={{ y: -4 }}
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                 <Globe className="w-8 h-8 text-white" />
@@ -112,8 +100,8 @@ export default function Home() {
             </motion.div>
             
             <motion.div 
-              className="bg-gray-900/80 backdrop-blur-lg rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300 border border-gray-700/50"
-              whileHover={{ y: -10 }}
+              className="modern-card modern-card-dark p-8 text-center group smooth-transition"
+              whileHover={{ y: -4 }}
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-400 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                 <Users className="w-8 h-8 text-white" />
@@ -124,8 +112,8 @@ export default function Home() {
             </motion.div>
             
             <motion.div 
-              className="bg-gray-900/80 backdrop-blur-lg rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300 border border-gray-700/50"
-              whileHover={{ y: -10 }}
+              className="modern-card modern-card-dark p-8 text-center group smooth-transition"
+              whileHover={{ y: -4 }}
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-400 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                 <Target className="w-8 h-8 text-white" />
@@ -136,8 +124,8 @@ export default function Home() {
             </motion.div>
             
             <motion.div 
-              className="bg-gray-900/80 backdrop-blur-lg rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-300 border border-gray-700/50"
-              whileHover={{ y: -10 }}
+              className="modern-card modern-card-dark p-8 text-center group smooth-transition"
+              whileHover={{ y: -4 }}
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -151,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Issues Section */}
-      <section id="issues" className="relative py-20">
+      <section id="issues" className="relative py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,11 +147,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl md:text-6xl font-black mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Vote on Global Issues
+            <h2 className="text-large md:text-6xl mb-6 text-gray-900 dark:text-white">
+              Global Issues That Matter
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Your voice matters. Vote on the issues that shape our world and drive meaningful change.
+            <p className="text-body text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Your voice matters. Vote on the issues that shape our world and drive meaningful change for everyone.
             </p>
           </motion.div>
 

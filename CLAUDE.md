@@ -23,11 +23,13 @@ Citizens of Earth V2 is a modern, feature-rich global civic engagement platform 
 - **HTTP-only cookies** - Secure authentication storage
 
 ### UI/UX Design Philosophy
-- **Dark Theme** - Modern glass morphism with purple/cyan gradients
+- **Modern Design System** - Clean, professional interface with glass morphism effects
+- **Dark Theme** - Modern aesthetic with purple/cyan gradients
 - **Responsive Design** - Mobile-first approach with adaptive layouts
 - **Micro-interactions** - Smooth animations and hover effects
 - **Emotional Engagement** - High-impact imagery and compelling copy
 - **Accessibility** - Proper contrast ratios and keyboard navigation
+- **Copyright Compliant** - Removed all proprietary design references for legal compliance
 
 ## Core Features
 
@@ -45,11 +47,12 @@ Citizens of Earth V2 is a modern, feature-rich global civic engagement platform 
 - **Gamification**: XP rewards (10 XP per vote) and user progression
 
 ### 3. User Experience Features
-- **Glass Morphism UI**: Modern translucent effects with backdrop blur
+- **Modern Glass UI**: Professional translucent effects with backdrop blur
 - **Smooth Animations**: Page transitions and micro-interactions
 - **Progress Indicators**: Visual progress bars for each issue
 - **Global Stats**: Total votes, active citizens, goals achieved
 - **Mobile Responsive**: Adaptive layout for all screen sizes
+- **Clean Design System**: Generic modern styling without proprietary references
 
 ## Database Schema
 
@@ -165,8 +168,16 @@ citizens-earth-v2/
 
 ## Styling & Design System
 
+### Modern Design System
+- **CSS Architecture**: Custom properties with semantic naming
+- **Component Classes**: `.modern-card`, `.btn-primary`, `.modern-input` system
+- **Typography Scale**: `.text-large`, `.text-title`, `.text-body`, `.text-caption`
+- **Status Indicators**: `.status-success`, `.status-warning`, `.status-error`
+- **Copyright Compliant**: All proprietary references removed for legal compliance
+
 ### Color Palette
-- **Primary**: Cyan (#06b6d4) and Purple (#8b5cf6)
+- **Primary Colors**: Blue (#007AFF), Green (#34C759), Orange (#FF9500), Red (#FF3B30)
+- **Neutral System**: Gray scale from #F2F2F7 to #000000
 - **Background**: Dark gradients (slate-900 to purple-900)
 - **Glass Effects**: rgba(255,255,255,0.1) with backdrop-blur
 - **Text**: High contrast white/gray for accessibility
@@ -290,6 +301,12 @@ NODE_ENV="development"
 - **Database Migrations**: Version-controlled schema changes
 - **Developer Experience**: Intuitive query API
 - **Multi-database**: Support for various database providers
+
+### Design System Architecture
+- **Generic Naming**: Semantic class names without proprietary references
+- **CSS Variables**: Flexible theming with custom properties
+- **Component System**: Reusable, maintainable design tokens
+- **Legal Compliance**: Copyright-safe design implementation
 
 ## Conclusion
 
